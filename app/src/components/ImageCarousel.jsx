@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import p1 from "../assets/p1.png";
 import p2 from "../assets/p2.png";
 import p3 from "../assets/p3.png";
+import Image from "next/image";
 
 const ImageCarousel = () => {
   const slides = [p1, p2, p3]; // Correctly define the slides array
@@ -25,8 +26,10 @@ const ImageCarousel = () => {
         {slides.map((slide, index) => (
           <div key={index} className="w-full h-[600px] flex-shrink-0">
             {/* Use an img tag instead of backgroundImage */}
-            <img
+            <Image
               src={slide.src || slide}
+              width={1920}
+              height={1080}
               alt={`Slide ${index + 1}`}
               className="w-full h-[600px] object-cover"
             />

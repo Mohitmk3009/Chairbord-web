@@ -28,8 +28,6 @@ const TermsandConditions = () => {
                 <p>
                     These Terms and Conditions, along with privacy policy or other terms (“Terms”) constitute a binding agreement by and between CHAIRBORD PVT LTD, ( “Website Owner” or “we” or “us” or “our”) and you (“you” or “your”) and relate to your use of our website, goods (as applicable) or services (as applicable) (collectively, “Services”).
                     By using our website and availing the Services, you agree that you have read and accepted these Terms (including the Privacy Policy). We reserve the right to modify these Terms at any time and without assigning any reason. It is your responsibility to periodically review these Terms to stay informed of updates.
-
-
                 </p>
 
                 <section id="section1">
@@ -50,7 +48,7 @@ const TermsandConditions = () => {
 
                         </li>
                         <li>
-                            The contents of the Website and the Services are proprietary to Us and you will not have any authority to claim any intellectual property rights, title, or interest in its contents.
+                            The contents of the Website and the Services are proprietary to us and you will not have any authority to claim any intellectual property rights, title, or interest in its contents.
 
                         </li>
                         <li>
@@ -132,7 +130,7 @@ const TermsandConditions = () => {
                             Submit requests electronically only once.
                         </li>
                         <li>
-                            We're not responsible for processing duplicate requests.
+                            We&apos;re not responsible for processing duplicate requests.
                         </li>
 
                     </ul>
@@ -140,7 +138,7 @@ const TermsandConditions = () => {
 
                     <ul className="list-disc pl-6 mt-2 space-y-2">
                         <li>
-                            You're aware of the risks involved with electronic signatures and accept full responsibility.
+                            You&apos;re aware of the risks involved with electronic signatures and accept full responsibility.
                         </li>
 
                     </ul>
@@ -177,7 +175,7 @@ const TermsandConditions = () => {
 
                     <ul className="list-disc pl-6 mt-2 space-y-2">
                         <li>
-                            We're not responsible for any issues with the third-party platform, such as errors or security breaches.
+                            We&apos;re not responsible for any issues with the third-party platform, such as errors or security breaches.
                         </li>
 
                     </ul>
@@ -198,7 +196,7 @@ const TermsandConditions = () => {
                             Once you submit an electronically signed instruction, it cannot be reversed.
                         </li>
                         <li>
-                            We may try to reverse transactions, but there's no guarantee.
+                            We may try to reverse transactions, but there&apos;s no guarantee.
                         </li>
                     </ul>
                     <h2 id='section2_12' className="font-semibold mt-4">12. Bank's Right to Reject:</h2>
@@ -234,19 +232,19 @@ const TermsandConditions = () => {
 
                     <ul className="list-disc pl-6 mt-2 space-y-2">
                         <li>
-                            We'll process payments based on your electronically signed instructions if there are sufficient funds.
+                            We&apos;ll process payments based on your electronically signed instructions if there are sufficient funds.
                         </li>
                         <li>
-                            We're not liable for delays or failures due to insufficient funds or other circumstances beyond our control.
+                            We&apos;re not liable for delays or failures due to insufficient funds or other circumstances beyond our control.
                         </li>
                     </ul><h2 id='section2_17' className="font-semibold mt-4">17. Due Diligence:</h2>
 
                     <ul className="list-disc pl-6 mt-2 space-y-2">
                         <li>
-                            We'll conduct due diligence to validate your requests.
+                            We&apos;ll conduct due diligence to validate your requests.
                         </li>
                         <li>
-                            We're not liable for losses if you fail to maintain confidentiality.
+                            We&apos;re not liable for losses if you fail to maintain confidentiality.
                         </li>
                     </ul><h2 id='section2_18' className="font-semibold mt-4">18. Security Risks:</h2>
 
@@ -255,16 +253,16 @@ const TermsandConditions = () => {
                             Sending information electronically has risks.
                         </li>
                         <li>
-                            We're not responsible for unauthorized access or fraudulent instructions.
+                            We&apos;re not responsible for unauthorized access or fraudulent instructions.
                         </li>
                     </ul><h2 id='section2_19' className="font-semibold mt-4">19. Understanding and Accepting Risks:</h2>
 
                     <ul className="list-disc pl-6 mt-2 space-y-2">
                         <li>
-                            You're aware of the risks and authorize us to act based on your electronic signatures.
+                            You&apos;re aware of the risks and authorize us to act based on your electronic signatures.
                         </li>
 
-                    </ul><h2 id='section2_20' className="font-semibold mt-4">20. Bank's Discretion:</h2>
+                    </ul><h2 id='section2_20' className="font-semibold mt-4">20. Bank&apos;s Discretion:</h2>
 
                     <ul className="list-disc pl-6 mt-2 space-y-2">
                         <li>
@@ -361,7 +359,7 @@ const TermsandConditions = () => {
                                     <a href='#section2_11' className="hover:underline">Irreversible Instructions</a>
                                 </li>
                                 <li>
-                                    <a href='#section2_12' className="hover:underline">Bank's Right to Reject</a>
+                                    <a href='#section2_12' className="hover:underline">Bank&apos;s Right to Reject</a>
                                 </li>
                                 <li>
                                     <a href='#section2_13' className="hover:underline">Information Sharing</a>
@@ -385,7 +383,7 @@ const TermsandConditions = () => {
                                     <a href='#section2_19' className="hover:underline">Understanding and Accepting Risks</a>
                                 </li>
                                 <li>
-                                    <a href='#section2_20' className="hover:underline">Bank's Discretion</a>
+                                    <a href='#section2_20' className="hover:underline">Bank&apos;s Discretion</a>
                                 </li>
                                 <li>
                                     <a href='#section2_21' className="hover:underline">Indemnification</a>

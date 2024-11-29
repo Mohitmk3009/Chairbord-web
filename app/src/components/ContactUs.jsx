@@ -21,7 +21,7 @@ const ContactUs = () => {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50"></div>
                 <div className="relative z-10">
-                    <h1 className="text-6xl font-bold mb-2">We're here to help.</h1>
+                    <h1 className="text-6xl font-bold mb-2">We&apos;re here to help.</h1>
                     <p className="text-lg">Home &gt; Contact Us</p>
                 </div>
             </div>
@@ -32,7 +32,7 @@ const ContactUs = () => {
                     Get in touch with us.
                 </h2>
                 <p className="text-center text-gray-600 mb-8">
-                    Want to get in touch? We'd love to hear from you. Here's how you can
+                    Want to get in touch? We&apos;d love to hear from you. Here&apos;s how you can
                     reach us...
                 </p>
 

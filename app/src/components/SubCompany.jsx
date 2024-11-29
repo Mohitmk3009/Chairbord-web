@@ -1,9 +1,5 @@
 'use client'
 import { useEffect, useState, useRef } from 'react';
-import fastag from '../assets/Fastag.png'
-import creditcard from '../assets/creditcard.webp'
-import gps from '../assets/gps.jpg'
-import accessories from '../assets/Accessories.png'
 import octabae from '../assets/octabae.png'
 import proofito from '../assets/proofito.png'
 import Image from 'next/image';

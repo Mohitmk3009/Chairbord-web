@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from './src/components/Header'
-import HeroSection from './src/components/HeroSection'
 import TeamMembers from './src/components/TeamMembers'
 import ProductsSection from './src/components/ProductsSection'
 import SubCompany from './src/components/SubCompany'
@@ -14,11 +13,9 @@ const page = () => {
       <Header />
       <ImageCarousel />
       <AboutUs/>
-      {/* <HeroSection/> */}
       <TeamMembers />
       <ProductsSection />
       <SubCompany />
-      {/* <ContactUs /> */}
       <Footer />
     </>
   )

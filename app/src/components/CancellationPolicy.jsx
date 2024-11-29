@@ -15,7 +15,7 @@ const CancellationPolicy = () => {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50"></div>
                 <div className="relative z-10">
-                    <h1 className="text-6xl font-bold mb-2">We're here to help.</h1>
+                    <h1 className="text-6xl font-bold mb-2">We&apos;re here to help.</h1>
                     <p className="text-lg">Home &gt; Privacy Policy</p>
                 </div>
             </div>

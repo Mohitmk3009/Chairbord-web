@@ -1,10 +1,6 @@
 'use client'
 import React, { useState } from "react";
 import m1 from '../assets/m1.png'
-import m2 from '../assets/m2.png'
-import m3 from '../assets/m4.png'
-import m4 from '../assets/m1.png'
-import m5 from '../assets/m2.png'
 
 import Image from "next/image";
 const teamMembers = [

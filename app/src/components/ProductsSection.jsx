@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState, useRef } from 'react';
+// import { useEffect, useState, useRef } from 'react';
 import fastag from '../assets/Fastag.png'
 import creditcard from '../assets/creditcard.jpg'
 import gps from '../assets/gps.jpg'
@@ -7,27 +7,27 @@ import accessories from '../assets/Accessories.png'
 import Image from 'next/image';
 
 const ProductsSection = () => {
-    const [inView, setInView] = useState(false);
-    const sectionRef = useRef(null);
+    // const [inView, setInView] = useState(false);
+    // const sectionRef = useRef(null);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setInView(entry.isIntersecting);
-            },
-            { threshold: 0.1 } // Adjust the threshold as needed
-        );
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver(
+    //         ([entry]) => {
+    //             setInView(entry.isIntersecting);
+    //         },
+    //         { threshold: 0.1 } // Adjust the threshold as needed
+    //     );
 
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
+    //     if (sectionRef.current) {
+    //         observer.observe(sectionRef.current);
+    //     }
 
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
+    //     return () => {
+    //         if (sectionRef.current) {
+    //             observer.unobserve(sectionRef.current);
+    //         }
+    //     };
+    // }, []);
 
     return (
         // <div
@@ -95,7 +95,7 @@ const ProductsSection = () => {
                         <h3>FASTag</h3>
                         <span className='font-medium' >What is FASTag?</span>
                         <p className='mt-2 text-black'>
-                        FASTag is a revolutionary electronic toll collection system that revolutionizes your highway travel experience. It's a simple, reloadable tag that you affix to your vehicle's windscreen. This nifty device uses Radio Frequency Identification (RFID) technology to automatically deduct toll charges from your linked prepaid account as you pass through toll plazas.
+                        FASTag is a revolutionary electronic toll collection system that revolutionizes your highway travel experience. It&apos;s a simple, reloadable tag that you affix to your vehicle&apos;s windscreen. This nifty device uses Radio Frequency Identification (RFID) technology to automatically deduct toll charges from your linked prepaid account as you pass through toll plazas.
                         </p>
                         {/* <span className='font-medium' >Why Choose FASTag?</span>
                         <p className='mt-2 text-black'>
@@ -112,7 +112,7 @@ const ProductsSection = () => {
                         <h3>GPS</h3>
                         <span className='font-medium'>What is GPS?</span>
                         <p className='mt-2'>
-                        GPS, or Global Positioning System, is a satellite-based navigation system that provides highly accurate positioning, navigation, and timing (PNT) services worldwide. It's the technology that powers your smartphone's maps, your car's navigation system, and many other devices.
+                        GPS, or Global Positioning System, is a satellite-based navigation system that provides highly accurate positioning, navigation, and timing (PNT) services worldwide. It&apos;s the technology that powers your smartphone&apos;s maps, your car&apos;s navigation system, and many other devices.
                         </p>
 
 
@@ -143,7 +143,7 @@ const ProductsSection = () => {
                         <h3>Credit Card</h3>
                         <span className='font-medium'>HDFC Credit Cards: Your Gateway to a World of Possibilities</span>
                         <p className='mt-2'>
-                        HDFC Bank offers a diverse range of credit cards tailored to meet various needs and lifestyles. From basic rewards cards to premium travel and lifestyle cards, you're sure to find the perfect card to elevate your financial journey.
+                        HDFC Bank offers a diverse range of credit cards tailored to meet various needs and lifestyles. From basic rewards cards to premium travel and lifestyle cards, you&apos;re sure to find the perfect card to elevate your financial journey.
                         </p>
 
 
@@ -157,7 +157,7 @@ const ProductsSection = () => {
                         <h3>Accessories</h3>
                         <span className='font-medium'>Accessories: The Finishing Touch</span>
                         <p className='mt-2'>
-                        Accessories are the secret ingredient to elevating any outfit. They can transform a simple look into a statement, adding a touch of personality and style. Whether you're dressing up for a special occasion or keeping it casual, the right accessories can make all the difference.
+                        Accessories are the secret ingredient to elevating any outfit. They can transform a simple look into a statement, adding a touch of personality and style. Whether you&apos;re dressing up for a special occasion or keeping it casual, the right accessories can make all the difference.
                         </p>
 
 

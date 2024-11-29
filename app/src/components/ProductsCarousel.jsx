@@ -184,12 +184,12 @@ const ProductCarousel = () => {
   const currentProduct = products[currentIndex];
 
   return (
-    <div className="mx-auto p-4 border border-gray-200 rounded-lg shadow-lg bg-white ">
+    <div className="mx-auto p-4 border border-gray-200 rounded-lg shadow-lg bg-[#F5F5F5]">
       {/* Image and Navigation */}
-      <div className="relative flex justify-center items-center">
+      <div className="relative flex justify-center items-center bg-white px-20 py-5 mx-2 rounded-2xl shadow-md">
         <button
           onClick={prevProduct}
-          className="absolute left-0 text-xl bg-gray-200 py-2 px-4 rounded-full text-black shadow-lg z-10"
+          className="absolute left-5 text-xl bg-gray-200 py-2 px-4  rounded-full text-black shadow-lg z-10"
         >
           &#x276E;
         </button>
@@ -200,14 +200,14 @@ const ProductCarousel = () => {
         />
         <button
           onClick={nextProduct}
-          className="absolute right-0 text-xl bg-gray-200 py-2 px-4 rounded-full text-black shadow-lg z-10"
+          className="absolute right-5 text-xl bg-gray-200 py-2 px-4 rounded-full text-black shadow-lg z-10"
         >
           &#x276F;
         </button>
       </div>
 
       {/* Product Description */}
-      <div className="mt-4 text-center space-y-4">
+      <div className="mt-4 text-center space-y-4 bg-white px-10 py-5 mx-2 rounded-2xl shadow-md">
         <h3 className="text-3xl font-bold text-black">{currentProduct.name}</h3>
         {currentProduct?.description?.heading1 && (
           <h4 className="text-xl font-semibold flex justify-start text-gray-700">

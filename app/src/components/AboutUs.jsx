@@ -56,7 +56,7 @@ const AboutUs = () => {
                     </h2>
                     <p className="text-gray-600 leading-relaxed mb-4">
 
-                        At Chairbord, we're passionate about revolutionizing the way you travel. As a leading provider of innovative mobility solutions, we're committed to simplifying your journey and enhancing your overall experience.
+                        At Chairbord, we&apos;re passionate about revolutionizing the way you travel. As a leading provider of innovative mobility solutions, we&apos;re committed to simplifying your journey and enhancing your overall experience.
 
                     </p>
                     <section id="section5" className="text-black">
@@ -89,7 +89,7 @@ const AboutUs = () => {
                     </section>
                     <p className="text-gray-600 mt-4 leading-relaxed mb-4">
 
-                        Whether you're an individual or a business, Chairbord has the perfect solution for you. Explore our range of products and services, and experience the future of mobility.
+                        Whether you&apos;re an individual or a business, Chairbord has the perfect solution for you. Explore our range of products and services, and experience the future of mobility.
 
                     </p>
                     <p className="text-[#00B4FF] text-4xl  flex justify-center font-extrabold leading-relaxed ">

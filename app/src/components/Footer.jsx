@@ -28,11 +28,21 @@ const Footer = () => {
                     <div>
                         <h2 className="text-3xl font-bold text-[#00B4FF] mb-2">QUICK LINKS</h2>
                         <ul className="gap-2 text-lg grid-cols-2 grid text-gray-300">
-                            <a href="/">Home</a>
-                            <a href="/contactus">Contact us</a>
-                            <a href="/privacypolicy">Privacy policy</a>
-                            <a href="/cancellationpolicy">Cancellation policy</a>
-                            <a href="/termsandconditions">Terms & conditions</a>
+                            <Link href="/" className=" outline-none">
+                                Home
+                            </Link>
+                            <Link href="/contactus" className=" outline-none">
+                                Contact us
+                            </Link>
+                            <Link href="/privacypolicy" className=" outline-none">
+                                Privacy policy
+                            </Link>
+                            <Link href="/cancellationpolicy" className=" outline-none">
+                                Cancellation policy
+                            </Link>
+                            <Link href="/termsandconditions" className=" outline-none">
+                                Terms & conditions
+                            </Link>
                         </ul>
                     </div>
                     <div>
@@ -59,16 +69,24 @@ const Footer = () => {
                     <div>
                         <h2 className="text-3xl font-bold text-[#00B4FF] mt-6 mb-2">SOCIALIZE</h2>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-white hover:bg-white bg-[#00B4FF]/15 px-2 py-1 rounded-full hover:text-[#0A66C2]">
+                            <Link
+                                href="https://linkedin.com/in/mohit-kumar-b161a322a"
+                                className="text-white hover:bg-white bg-[#00B4FF]/15 px-2 py-1 rounded-full hover:text-[#0A66C2]"
+                            >
                                 <i className="ri-linkedin-fill text-2xl"></i> {/* Remix Icon LinkedIn */}
-                            </a>
-                            <a href="#" className="text-white hover:bg-white bg-[#00B4FF]/15 px-2 py-1 rounded-full hover:text-[#1877F2]">
+                            </Link>
+                            <Link
+                                href="https://facebook.com"
+                                className="text-white hover:bg-white bg-[#00B4FF]/15 px-2 py-1 rounded-full hover:text-[#1877F2]"
+                            >
                                 <i className="ri-facebook-fill text-2xl"></i> {/* Remix Icon Facebook */}
-                            </a>
-                            <a href="#" className="text-white hover:bg-white bg-[#00B4FF]/15 px-2 py-1 rounded-full hover:text-[#0A66C2]">
+                            </Link>
+                            <Link
+                                href="https://twitter.com"
+                                className="text-white hover:bg-white bg-[#00B4FF]/15 px-2 py-1 rounded-full hover:text-[#0A66C2]"
+                            >
                                 <i className="ri-twitter-fill text-2xl"></i> {/* Remix Icon Twitter */}
-                            </a>
-                        </div>
+                            </Link>                        </div>
                     </div>
 
                 </div>
