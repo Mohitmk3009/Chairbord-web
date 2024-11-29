@@ -18,7 +18,7 @@ const Footer = () => {
                     />
                     <h2 className="text-3xl font-bold text-[#00B4FF]">ABOUT US</h2>
                     <p className="text-lg text-justify mt-[-20px] text-gray-300">
-                        At Chairbord, we're passionate about revolutionizing the way you travel. As a leading provider of innovative mobility solutions, we're committed to simplifying your journey and enhancing your overall experience.
+                        At Chairbord, we&apos;re passionate about revolutionizing the way you travel. As a leading provider of innovative mobility solutions, we&apos;re committed to simplifying your journey and enhancing your overall experience.
 
                     </p>
                 </div>

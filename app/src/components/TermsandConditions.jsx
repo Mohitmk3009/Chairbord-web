@@ -15,8 +15,8 @@ const TermsandConditions = () => {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50"></div>
                 <div className="relative z-10">
-                    <h1 className="text-6xl font-bold mb-2">We're here to help.</h1>
-                    <p className="text-lg">Home &gt; Privacy Policy</p>
+                    <h1 className="text-6xl font-bold mb-2">We&apos;re here to help.</h1>
+                    <p className="text-lg">Home &gt; Terms and Conditions</p>
                 </div>
             </div>
         <div className="flex flex- bg-white md:flex-row text-black px-20 py-20 space-y-6 md:space-y-0 md:space-x-10 text-justify">
@@ -106,10 +106,10 @@ const TermsandConditions = () => {
                             Use the email address registered with the us to sign documents.
                         </li>
                         <li>
-                            We'll send instructions to your registered email address.
+                            We&apos;ll send instructions to your registered email address.
                         </li>
                         <li>
-                            We may accept signatures from unregistered email addresses, but we're not obligated to.
+                            We may accept signatures from unregistered email addresses, but we&apos;re not obligated to.
                         </li>
                     </ul>
                     <h2 id='section2_3' className="font-semibold mt-4">3. Authorizing the Chairbord:</h2>
