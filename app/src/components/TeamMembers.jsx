@@ -9,20 +9,26 @@ import m5 from '../assets/m2.png'
 import Image from "next/image";
 const teamMembers = [
   {
-    name: "Kamlesh Natwadiya",
-    designation: "CEO & MD",
+    name: "Mr. Kamlesh Natwadiya",
+    designation: "(CEO & MD)",
+    email:"ceo@chairbord.com",
+    qualification:"Graduated from Rajasthan University",
     image: m1,
     bgColor: "bg-yellow-300",
   },
   {
-    name: "Sunil Natwadiya",
+    name: "Mr. Sunil Natwadiya",
     designation: "CMO",
+    email:"sunil@chairbord.com",
+    qualification:"Graduated from Rajasthan University",
     image: m1,
     bgColor: "bg-green-300",
   },
   {
-    name: "Mahendra Natwadiya",
-    designation: "COO",
+    name: "Mr. Mahendra Natwadiya",
+    designation: "(Manager)",
+    email:"connect@chairbord.com",
+    qualification:"Graduated from Rajasthan University",
     image: m1,
     bgColor: "bg-blue-500",
   },
@@ -72,7 +78,7 @@ const TeamMembers = () => {
         <h2 className="text-center mx-4 text-2xl font-semibold text-black">Team Members</h2>
         <div className="flex-grow border-t border-gray-300 h-[1px] w-[150px]"></div>
       </div>
-      <div className="relative flex items-center w-full max-w-7xl">
+      <div className="relative flex items-center w-full max-w-[1400px]">
         <button
           onClick={handlePrev}
           className="absolute left-0 text-xl bg-[#F5F5F5] py-2 px-4 rounded-full text-black shadow-lg z-10"
@@ -86,15 +92,18 @@ const TeamMembers = () => {
               const sizeClass = isCenter ? "w-[350px] h-[350px]" : "w-[250px] h-[250px]";
               const imageSizeClass = isCenter ? "w-full h-[450px]" : "w-full h-[350px]";
               const memberTextClass = isCenter
-                ? "text-4xl font-semibold"
-                : "text-2xl opacity-30 font-semibold";
+                ? "text-3xl font-semibold"
+                : "text-xl opacity-30 font-semibold";
               const desgnationTextClass = isCenter
                 ? "text-2xl font-medium"
                 : "text-md opacity-30 font-medium";
+                const otherTextClass = isCenter
+                ? "text-lg font-medium"
+                : "text-sm opacity-30 font-medium";
               return (
                 <div
                   key={index}
-                  className={`flex flex-col items-center justify-center mx-10 my-20 transition-all duration-300 ${isCenter ? "" : "opacity-60"}`}
+                  className={`flex flex-col items-center justify-center mx-16 my-20 transition-all duration-300 ${isCenter ? "" : "opacity-60"}`}
                 >
                   <div
                     className={`rounded-full flex items-center justify-center ${member.bgColor} ${sizeClass} transition-all duration-300`}
@@ -109,6 +118,9 @@ const TeamMembers = () => {
                   </div>
                   <p className={`${memberTextClass} mt-4 text-black`}>{member.name}</p>
                   <p className={`${desgnationTextClass}  text-black`}>{member.designation}</p>
+                  <p className={`${otherTextClass}  text-black`}>{member.email}</p>
+                  <p className={`${otherTextClass}  text-black`}>{member.qualification}</p>
+
                 </div>
               );
             })}

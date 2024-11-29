@@ -1,8 +1,24 @@
 // pages/privacy-policy.js
 import React from "react";
-
+import backgroundImage from "../assets/contactusbg.jpg";
 const TermsandConditions = () => {
     return (
+        <>
+        <div
+                className="relative text-white text-center py-20"
+                style={{
+                    backgroundImage: `url(${backgroundImage.src})`, // Use .src to get the resolved path
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                }}
+            >
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/50"></div>
+                <div className="relative z-10">
+                    <h1 className="text-6xl font-bold mb-2">We're here to help.</h1>
+                    <p className="text-lg">Home &gt; Privacy Policy</p>
+                </div>
+            </div>
         <div className="flex flex- bg-white md:flex-row text-black px-20 py-20 space-y-6 md:space-y-0 md:space-x-10 text-justify">
             {/* Left Content: Privacy Policy Details */}
             <div className="w-full md:w-3/4 space-y-6 overflow-y-auto pr-5 max-h-[80vh]">
@@ -395,6 +411,7 @@ const TermsandConditions = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 
