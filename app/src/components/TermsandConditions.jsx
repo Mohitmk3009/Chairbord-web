@@ -159,7 +159,7 @@ const TermsandConditions = () => {
 
                     <ul className="list-disc pl-6 mt-2 space-y-2">
                         <li>
-                            You're responsible for ensuring authorized individuals can sign documents on your behalf.
+                            You&apos;re responsible for ensuring authorized individuals can sign documents on your behalf.
                         </li>
 
                     </ul>
@@ -199,7 +199,7 @@ const TermsandConditions = () => {
                             We may try to reverse transactions, but there&apos;s no guarantee.
                         </li>
                     </ul>
-                    <h2 id='section2_12' className="font-semibold mt-4">12. Bank's Right to Reject:</h2>
+                    <h2 id='section2_12' className="font-semibold mt-4">12. Bank&apos;s Right to Reject:</h2>
 
                     <ul className="list-disc pl-6 mt-2 space-y-2">
                         <li>
