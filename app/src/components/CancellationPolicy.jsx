@@ -1,6 +1,6 @@
 // pages/privacy-policy.js
 import React from "react";
-import backgroundImage from "../assets/contactusbg.jpg";
+import backgroundImage from "../assets/cancellation.png";
 const CancellationPolicy = () => {
     return (
         <>
