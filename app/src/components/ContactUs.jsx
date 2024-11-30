@@ -4,7 +4,7 @@ import phone from "../assets/phone-call.png";
 import email from "../assets/email.png";
 import address from "../assets/location.png";
 import timing from "../assets/clock.png";
-import backgroundImage from "../assets/contactusbg.jpg"; // Ensure the file path is correct
+import backgroundImage from "../assets/contactus.jpg"; // Ensure the file path is correct
 
 const ContactUs = () => {
     return (
