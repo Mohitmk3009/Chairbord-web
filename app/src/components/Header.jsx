@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import React from 'react';
-import { Navbar, NavbarContent, NavbarItem, Button } from "@nextui-org/react";
+import { Navbar, NavbarContent, NavbarItem,Link, Button } from "@nextui-org/react";
 import logo from '../assets/chairbord.png';
 
 const Header = () => {
@@ -23,9 +23,9 @@ const Header = () => {
       />
       <NavbarContent className="hidden sm:flex gap-10 text-xl" justify="center">
         <NavbarItem>
-          <button onClick={() => handleScroll('home')} className="text-white">
+        <Link color="foreground" href="/">
             Home
-          </button>
+          </Link>
         </NavbarItem>
         <NavbarItem>
           <button onClick={() => handleScroll('members')} className="text-white">
@@ -43,9 +43,9 @@ const Header = () => {
           </button>
         </NavbarItem>
         <NavbarItem>
-          <button onClick={() => handleScroll('contact')} className="text-white">
+        <Link color="foreground" href="/contactus">
             Contact
-          </button>
+          </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent>
