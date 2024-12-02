@@ -1,12 +1,64 @@
+'use client'
+import React, { useState } from "react";
 import Image from "next/image";
-import React from "react";
 import phone from "../assets/phone-call.png";
 import email from "../assets/email.png";
 import address from "../assets/location.png";
 import timing from "../assets/clock.png";
 import backgroundImage from "../assets/contactus.png"; // Ensure the file path is correct
+import { toast } from "react-toastify"; // Assuming you're using react-toastify for notifications
+import "react-toastify/dist/ReactToastify.css";
+import client from '@/app/axiosClient';
+
 
 const ContactUs = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        number: '',
+        notice: ''
+    });
+    const [isChecked, setIsChecked] = useState(false);
+    const [selectedValue, setSelectedValue] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (!isChecked) {
+            toast.error("Please accept the terms and conditions!");
+            return;
+        }
+
+        setLoading(true);
+
+        try {
+            const response = await client.post('/user/contact-us', {
+                name: formData.name,
+                email: formData.email,
+                contactNumber: formData.number,
+                subject: selectedValue,
+                notice: formData.notice,
+            });
+            toast.success("Application sent successfully!");
+
+            // Reset the form after successful submission
+            setFormData({
+                name: '',
+                email: '',
+                number: '',
+                notice: ''
+            });
+            setIsChecked(false);
+            setSelectedValue('');
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            toast.error("Error submitting form. Please try again.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <div className="bg-gray-50">
             {/* Hero Section */}
@@ -36,21 +88,21 @@ const ContactUs = () => {
                     reach us...
                 </p>
 
-                <div className="lg:grid md:grid-cols-2 flex flex-col-reverse gap-8 ">
+                <div className="lg:grid md:grid-cols-2 flex flex-col-reverse gap-8">
                     {/* Contact Info */}
-                    <div className="gap-2 lg:grid lg:grid-cols-2  ">
-                        <div className="flex items-center gap-4 ">
+                    <div className="gap-2 lg:grid lg:grid-cols-2">
+                        <div className="flex items-center gap-4">
                             <Image
                                 src={phone}
                                 alt="Phone Icon"
                                 className="w-[20px]"
                             />
-                            <div className="lg:mt-7 ">
+                            <div className="lg:mt-7">
                                 <p className="font-semibold lg:text-xl text-lg text-black">Call the helpline</p>
                                 <p className="text-gray-600 lg:text-lg text-sm">+91-9269666646</p>
                             </div>
                         </div>
-                        <div className="flex items-center gap-4 ">
+                        <div className="flex items-center gap-4">
                             <Image
                                 src={email}
                                 alt="Email Icon"
@@ -61,20 +113,20 @@ const ContactUs = () => {
                                 <p className="text-gray-600 lg:text-lg text-sm">connect@chairbord.com</p>
                             </div>
                         </div>
-                        <div className="flex items-center gap-4 lg:mt-[-50px]">
+                        <div className="flex items-center gap-4 lg:mt-[-45px]">
                             <Image
                                 src={address}
                                 alt="Location Icon"
-                                className="w-[20px]"
+                                className="w-[20px] lg:mb-[58px] mb-[40px]"
                             />
-                            <div className="lg:mt-12  mt-2">
+                            <div className="lg:mt-12 mt-2">
                                 <p className="font-semibold lg:text-xl text-lg text-black">Location:</p>
                                 <p className="text-gray-600 lg:w-5/6 text-justify lg:text-lg text-sm">
-                                ChairBord pvt ltd 13, Sapna towar, near Marudhar Mart, Kalwar road, Govindpura, Jaipur, Rajasthan-302012
+                                    ChairBord Pvt Ltd, 13 Sapna Tower, Near Marudhar Mart, Kalwar Road, Govindpura, Jaipur, Rajasthan-302012
                                 </p>
                             </div>
                         </div>
-                        <div className="flex items-center gap-4 lg:mt-[-50px]">
+                        <div className="flex items-center gap-4 lg:mt-[-110px]">
                             <Image
                                 src={timing}
                                 alt="Clock Icon"
@@ -89,35 +141,65 @@ const ContactUs = () => {
 
                     {/* Contact Form */}
                     <div className="bg-white lg:p-8 p-4 shadow-lg rounded-lg mt-6 lg:mt-0">
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="lg:grid grid-cols-2 flex flex-col gap-4 mb-4">
                                 <input
                                     type="text"
-                                    placeholder="What's your name?"
+                                    placeholder="Enter your name"
+                                    value={formData.name}
+                                    onChange={(e) =>
+                                        setFormData((prev) => ({ ...prev, name: e.target.value }))
+                                    }
                                     className="col-span-1 border-[.5px] border-gray-500 focus:border-black rounded-lg px-4 py-2 w-full text-gray-700"
                                 />
                                 <input
                                     type="text"
-                                    placeholder="Enter Mobile Number"
+                                    placeholder="Enter Email"
+                                    value={formData.email}
+                                    onChange={(e) =>
+                                        setFormData((prev) => ({ ...prev, email: e.target.value }))
+                                    }
                                     className="col-span-1 border-[.5px] border-gray-500 focus:border-black rounded-lg px-4 py-2 w-full text-gray-700"
                                 />
                             </div>
+                            <input
+                                type="text"
+                                placeholder="Enter Mobile Number"
+                                value={formData.number}
+                                onChange={(e) =>
+                                    setFormData((prev) => ({ ...prev, number: e.target.value }))
+                                }
+                                className="col-span-1 border-[.5px] mb-4 border-gray-500 focus:border-black rounded-lg px-4 py-2 w-full text-gray-700"
+                            />
                             <textarea
                                 placeholder="Your message..."
+                                value={formData.notice}
+                                onChange={(e) => setFormData({ ...formData, notice: e.target.value })}
                                 className="border-[.5px] border-gray-500 focus:border-black rounded-lg px-4 py-2 w-full mb-4 text-gray-700"
                                 rows="4"
                             ></textarea>
-                            <p className="text-xs text-justify text-gray-500 mb-4">
-                                By submitting this form, you agree to receive occasional
-                                messages about our products and services via mobile. You can
-                                opt-out at any time, and we will never share your mobile number
-                                with third parties.
-                            </p>
+                            <div className="flex">
+                                <input
+                                    type="checkbox"
+                                    id="agreement"
+                                    className="mr-3 h-5 w-5 text-black bg-white border-gray-700 rounded "
+                                    checked={isChecked}
+                                    onChange={(e) => setIsChecked(e.target.checked)}
+                                />
+                                <p className="text-xs text-justify text-gray-500 mb-4">
+                                    By submitting this form, you agree to receive occasional
+                                    messages about our products and services via mobile. You can
+                                    opt-out at any time, and we will never share your mobile number
+                                    with third parties.
+                                </p>
+                            </div>
+
                             <button
                                 type="submit"
+                                disabled={loading}
                                 className="w-full bg-[#00B4FF] text-white py-2 rounded-lg font-semibold"
                             >
-                                Submit Now
+                                {loading ? 'Submitting...' : 'Submit'}
                             </button>
                         </form>
                     </div>
