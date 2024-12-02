@@ -5,7 +5,7 @@ const PrivacyPolicy = () => {
     return (
         <>
         <div
-                className="relative text-white text-center py-20"
+                className="relative text-white text-center lg:py-20 py-8"
                 style={{
                     backgroundImage: `url(${backgroundImage.src})`, // Use .src to get the resolved path
                     backgroundSize: "cover",
@@ -15,14 +15,14 @@ const PrivacyPolicy = () => {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50"></div>
                 <div className="relative z-10">
-                    <h1 className="text-6xl font-bold mb-2">We&apos;re here to help.</h1>
-                    <p className="text-lg">Home &gt; Privacy Policy</p>
+                    <h1 className="lg:text-6xl text-3xl font-bold lg:mb-2">We&apos;re here to help.</h1>
+                    <p className="lg:text-lg ">Home &gt; Privacy Policy</p>
                 </div>
             </div>
-        <div className="flex flex- bg-white md:flex-row text-black px-20 py-20 space-y-6 md:space-y-0 md:space-x-10 text-justify">
+        <div className="flex lg:flex-row flex-col-reverse bg-white md:flex-row text-black lg:px-20 px-5 lg:py-20 py-5 space-y-6 md:space-y-0 md:space-x-10 text-justify">
             
             {/* Left Content: Privacy Policy Details */}
-            <div className="w-full md:w-3/4 space-y-6 overflow-y-auto pr-5 max-h-[80vh]">
+            <div className="w-full md:w-3/4 lg:space-y-6 space-y-4 lg:overflow-y-auto mt-5 lg:mt-0 lg:pr-5 lg:max-h-[80vh]">
                 <h1 className="text-3xl font-bold">Privacy Policy</h1>
                 <p className=" text-sm">Last Updated May 23rd, 2022</p>
 

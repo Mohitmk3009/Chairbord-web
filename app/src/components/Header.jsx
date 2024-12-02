@@ -26,12 +26,12 @@ const Header = () => {
   };
 
   return (
-    <Navbar className="bg-[#28272C] md:py-4 py-2 md:px-8 flex w-full justify-between sticky top-0 z-50">
+    <Navbar className="bg-[#28272C] md:py-4 py-2 md:px-8 px-2 flex w-full justify-between sticky top-0 z-50">
       {/* Logo */}
       <Image
         alt="Chairbord"
         src={logo}
-        className="md:w-[200px] w-[120px] "
+        className="md:w-[200px] w-[140px] "
         width={200}
         height={50}
       />
@@ -44,6 +44,11 @@ const Header = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
+          <button onClick={() => handleScroll("about")} className="text-white">
+            About
+          </button>
+        </NavbarItem>
+        <NavbarItem>
           <button onClick={() => handleScroll("members")} className="text-white">
             Members
           </button>
@@ -53,11 +58,7 @@ const Header = () => {
             Products
           </button>
         </NavbarItem>
-        <NavbarItem>
-          <button onClick={() => handleScroll("about")} className="text-white">
-            About
-          </button>
-        </NavbarItem>
+        
         <NavbarItem>
           <Link color="foreground" href="/contactus">
             Contact
@@ -113,6 +114,16 @@ const Header = () => {
             <li>
               <button
                 onClick={() => {
+                  handleScroll("about");
+                  toggleMenu();
+                }}
+              >
+                About
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
                   handleScroll("members");
                   toggleMenu();
                 }}
@@ -130,16 +141,7 @@ const Header = () => {
                 Products
               </button>
             </li>
-            <li>
-              <button
-                onClick={() => {
-                  handleScroll("about");
-                  toggleMenu();
-                }}
-              >
-                About
-              </button>
-            </li>
+            
             <li>
               <Link color="foreground" href="/contactus" onClick={toggleMenu}>
                 Contact

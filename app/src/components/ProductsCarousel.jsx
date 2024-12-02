@@ -184,39 +184,39 @@ const ProductCarousel = () => {
   const currentProduct = products[currentIndex];
 
   return (
-    <div className="mx-auto p-4 border border-gray-200 rounded-lg shadow-lg bg-[#F5F5F5]">
+    <div className="mx-auto p-4 border border-gray-200  shadow-lg bg-[#F5F5F5]">
       {/* Image and Navigation */}
-      <div className="relative flex justify-center items-center bg-white px-20 py-5 mx-2 rounded-2xl shadow-md">
+      <div className="relative flex justify-center items-center bg-white lg:px-20 px-14 lg:py-5 lg:mx-2 rounded-2xl shadow-md">
         <button
           onClick={prevProduct}
-          className="absolute left-5 text-xl bg-gray-200 py-2 px-4  rounded-full text-black shadow-lg z-10"
+          className="absolute lg:left-5 left-2 lg:text-xl text-base bg-gray-200 py-2 px-4  rounded-full text-black shadow-lg z-10"
         >
           &#x276E;
         </button>
         <Image
           src={currentProduct.image}
           alt={currentProduct.name}
-          className="w-full h-96 object-contain"
+          className="w-full lg:h-96 h-40 object-contain"
         />
         <button
           onClick={nextProduct}
-          className="absolute right-5 text-xl bg-gray-200 py-2 px-4 rounded-full text-black shadow-lg z-10"
+          className="absolute lg:right-5 right-2 lg:text-xl text-base bg-gray-200 py-2 px-4 rounded-full text-black shadow-lg z-10"
         >
           &#x276F;
         </button>
       </div>
 
       {/* Product Description */}
-      <div className="mt-4 text-center space-y-4 bg-white px-10 py-5 mx-2 rounded-2xl shadow-md">
+      <div className="mt-4 text-center space-y-4  bg-white lg:px-10 px-4 py-5 lg:mx-2 rounded-2xl shadow-md">
         <h3 className="text-3xl font-bold text-black">{currentProduct.name}</h3>
         {currentProduct?.description?.heading1 && (
-          <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+          <h4 className="lg:text-xl text-lg font-semibold text-justify flex justify-start text-gray-700">
             {currentProduct.description.heading1}
           </h4>
         )}
         {currentProduct?.description?.details1?.length > 0 &&
           currentProduct.description.details1.map((detail, index) => (
-            <p key={index} className="text-gray-600 text-left">
+            <p key={index} className="text-gray-600 text-justify text-sm">
               {detail}
             </p>
           ))}
@@ -224,61 +224,61 @@ const ProductCarousel = () => {
 
         {/* for credit and accessories */}
         {currentProduct?.description?.heading2_e && (
-          <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+          <h4 className="lg:text-xl text-lg font-semibold flex  justify-start text-gray-700">
             {currentProduct.description.heading2_e}
           </h4>
         )}
 
         {currentProduct?.description?.details2_1?.length > 0 &&
           currentProduct.description.details2_1.map((detail, index) => (
-            <p key={index} className="text-gray-600 text-left">
+            <p key={index} className="text-gray-600 text-justify text-sm ">
               {detail}
             </p>
           ))}
         <div className='ml-10 space-y-5'>
           {currentProduct?.description?.bullets1_1heading && (
-            <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+            <h4 className="lg:text-xl text-lg font-semibold flex text-justify justify-start text-gray-700">
               {currentProduct.description.bullets1_1heading}
             </h4>
           )}
           {currentProduct?.description?.bullets1_1?.length > 0 && (
-            <ul className="text-left list-disc list-inside space-y-2 text-gray-600">
+            <ul className=" list-disc list-inside text-justify text-sm space-y-2 text-gray-600">
               {currentProduct.description.bullets1_1.map((bullet, index) => (
                 <li key={index}>{bullet}</li>
               ))}
             </ul>
           )}
           {currentProduct?.description?.bullets1_2heading && (
-            <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+            <h4 className="lg:text-xl text-lg font-semibold flex justify-start text-gray-700">
               {currentProduct.description.bullets1_2heading}
             </h4>
           )}
           {currentProduct?.description?.bullets1_2?.length > 0 && (
-            <ul className="text-left list-disc list-inside space-y-2 text-gray-600">
+            <ul className="text-justify list-disc list-inside text-sm space-y-2 text-gray-600">
               {currentProduct.description.bullets1_2.map((bullet, index) => (
                 <li key={index}>{bullet}</li>
               ))}
             </ul>
           )}
           {currentProduct?.description?.bullets1_3heading && (
-            <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+            <h4 className="lg:text-xl text-lg text-justify font-semibold flex justify-start text-gray-700">
               {currentProduct.description.bullets1_3heading}
             </h4>
           )}
           {currentProduct?.description?.bullets1_3?.length > 0 && (
-            <ul className="text-left list-disc list-inside space-y-2 text-gray-600">
+            <ul className="text-justify list-disc list-inside text-sm space-y-2 text-gray-600">
               {currentProduct.description.bullets1_3.map((bullet, index) => (
                 <li key={index}>{bullet}</li>
               ))}
             </ul>
           )}
           {currentProduct?.description?.bullets1_4heading && (
-            <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+            <h4 className="lg:text-xl text-lg text-justify font-semibold flex justify-start text-gray-700">
               {currentProduct.description.bullets1_4heading}
             </h4>
           )}
           {currentProduct?.description?.bullets1_4?.length > 0 && (
-            <ul className="text-left list-disc list-inside space-y-2 text-gray-600">
+            <ul className="text-justify list-disc list-inside text-sm space-y-2 text-gray-600">
               {currentProduct.description.bullets1_4.map((bullet, index) => (
                 <li key={index}>{bullet}</li>
               ))}
@@ -287,54 +287,54 @@ const ProductCarousel = () => {
 
         </div>
         {currentProduct?.description?.heading2 && (
-          <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+          <h4 className="lg:text-xl text-lg font-semibold text-justify flex justify-start text-gray-700">
             {currentProduct.description.heading2}
           </h4>
         )}
         {currentProduct?.description?.bullets1?.length > 0 && (
-          <ul className="text-left list-disc list-inside space-y-2 text-gray-600">
+          <ul className="text-justify list-disc list-inside text-sm space-y-2 text-gray-600">
             {currentProduct.description.bullets1.map((bullet, index) => (
               <li key={index}>{bullet}</li>
             ))}
           </ul>
         )}
         {currentProduct?.description?.heading3 && (
-          <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+          <h4 className="lg:text-xl text-lg font-semibold text-justify flex justify-start text-gray-700">
             {currentProduct.description.heading3}
           </h4>
         )}
         {currentProduct?.description?.bullets2?.length > 0 && (
-          <ul className="text-left list-disc list-inside space-y-2 text-gray-600">
+          <ul className="text-justify list-disc list-inside text-sm space-y-2 text-gray-600">
             {currentProduct.description.bullets2.map((bullet, index) => (
               <li key={index}>{bullet}</li>
             ))}
           </ul>
         )}
         {currentProduct?.description?.heading4 && (
-          <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+          <h4 className="lg:text-xl text-lg text-justify font-semibold flex justify-start text-gray-700">
             {currentProduct.description.heading3}
           </h4>
         )}
         {currentProduct?.description?.bullets3?.length > 0 && (
-          <ul className="text-left list-disc list-inside space-y-2 text-gray-600">
+          <ul className="text-justify list-disc list-inside space-y-2 text-sm text-gray-600">
             {currentProduct.description.bullets2.map((bullet, index) => (
               <li key={index}>{bullet}</li>
             ))}
           </ul>
         )}
         {currentProduct?.description?.heading5 && (
-          <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+          <h4 className="lg:text-xl text-lg font-semibold text-justify flex justify-start text-gray-700">
             {currentProduct.description.heading3}
           </h4>
         )}
         {currentProduct?.description?.details2?.length > 0 &&
           currentProduct.description.details2.map((detail, index) => (
-            <p key={index} className="text-gray-600 text-left">
+            <p key={index} className="text-gray-600 text-sm text-justify">
               {detail}
             </p>
           ))}
         {currentProduct?.description?.bullets4?.length > 0 && (
-          <ul className="text-left list-disc list-inside space-y-2 text-gray-600">
+          <ul className="text-justify list-disc list-inside text-sm space-y-2 text-gray-600">
             {currentProduct.description.bullets2.map((bullet, index) => (
               <li key={index}>{bullet}</li>
             ))}
@@ -342,17 +342,17 @@ const ProductCarousel = () => {
         )}
         
         {currentProduct?.description?.fastagending && (
-    <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+    <h4 className="lg:text-xl text-lg  font-semibold text-justify flex justify-start text-gray-700">
       {currentProduct.description.fastagending}
     </h4>
   )}
         {currentProduct?.description?.gpsending && (
-    <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+    <h4 className="lg:text-xl text-lg  font-semibold text-justify flex justify-start text-gray-700">
       {currentProduct.description.gpsending}
     </h4>
   )}
   {currentProduct?.description?.creditending && (
-    <h4 className="text-xl font-semibold flex justify-start text-gray-700">
+    <h4 className="lg:text-xl text-lg font-semibold text-justify flex justify-start text-gray-700">
       {currentProduct.description.creditending}
     </h4>
   )}
