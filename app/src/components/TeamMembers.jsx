@@ -18,7 +18,7 @@ const teamMembers = [
   },
   {
     name: "Mr. Sunil Natwadiya",
-    designation: "CMO",
+    designation: "(CMO)",
     email:"sunil@chairbord.com",
     qualification:"Graduated from Rajasthan University",
     image: m2,
@@ -34,7 +34,7 @@ const teamMembers = [
   },
   {
     name: "Mr. Vinod Kudi",
-    designation: "Management",
+    designation: "(Management)",
     email:"vinod.kudi@chairbord.com",
     qualification:"Graduated from Rajasthan University",
     image: m4,
@@ -42,7 +42,7 @@ const teamMembers = [
   },
   {
     name: "Mr. Amit Kumar",
-    designation: "CTO/Product Manager",
+    designation: "(CTO/Product Manager)",
     email:"amit@chairbord.com",
     qualification:"Graduated from Rajasthan University",
     image: m5,
@@ -76,16 +76,16 @@ const TeamMembers = () => {
   };
 
   return (
-    <div className="flex flex-col items-center overflow-hidden bg-white">
-      <div className="flex items-center justify-center my-6">
+    <div className="flex flex-col items-center overflow-hidden   bg-white">
+      <div className="flex items-center justify-center lg:my-6 lg:px-6  px-5 lg:w-fit w-full">
         <div className="flex-grow border-t border-gray-300 h-[1px] w-[150px]"></div>
-        <h2 className="text-center mx-4 text-2xl font-semibold text-black">Team Members</h2>
-        <div className="flex-grow border-t border-gray-300 h-[1px] w-[150px]"></div>
+        <h2 className="text-center mx-4 lg:text-2xl text-lg font-semibold text-black">Team&nbsp;Members</h2>
+        <div className="flex-grow border-t border-gray-300 h-[1px] w-[150px] "></div>
       </div>
-      <div className="relative flex items-center w-full max-w-[1400px]">
+      <div className="relative flex items-center  w-full max-w-[1400px]  ">
         <button
           onClick={handlePrev}
-          className="absolute left-0 text-xl bg-[#F5F5F5] py-2 px-4 rounded-full text-black shadow-lg z-10"
+          className="absolute left-2 mb-14  text-xl bg-[#F5F5F5] py-2 px-4 rounded-full text-black shadow-lg z-10"
         >
           &#x276E;
         </button>
@@ -93,21 +93,21 @@ const TeamMembers = () => {
           <div className="flex transition-transform duration-300 ease-in-out">
             {getVisibleMembers().map((member, index) => {
               const isCenter = index === 1; // The second item is in the center
-              const sizeClass = isCenter ? "w-[350px] h-[350px]" : "w-[250px] h-[250px]";
-              const imageSizeClass = isCenter ? "w-full h-[450px]" : "w-full h-[350px]";
+              const sizeClass = isCenter ? "lg:w-[350px] lg:h-[350px] w-[250px] h-[250px] " : "w-[250px] h-[250px]";
+              const imageSizeClass = isCenter ? "w-full lg:h-[450px] h-[350px]" : "w-full lg:h-[350px] ";
               const memberTextClass = isCenter
-                ? "text-3xl font-semibold"
+                ? "lg:text-3xl text-xl font-semibold"
                 : "text-xl opacity-30 font-semibold";
               const desgnationTextClass = isCenter
-                ? "text-2xl font-medium"
+                ? "lg:text-2xl text-lg font-medium"
                 : "text-md opacity-30 font-medium";
                 const otherTextClass = isCenter
-                ? "text-lg font-medium"
+                ? "lg:text-lg text-sm font-medium"
                 : "text-sm opacity-30 font-medium";
               return (
                 <div
                   key={index}
-                  className={`flex flex-col items-center justify-center mx-16 my-20 transition-all duration-300 ${isCenter ? "" : "opacity-60"}`}
+                  className={`flex flex-col items-center  justify-center mx-16 lg:my-20 mt-20 mb-5 transition-all duration-300 ${isCenter ? "" : "opacity-60"}`}
                 >
                   <div
                     className={`rounded-full flex items-center justify-center ${member.bgColor} ${sizeClass} transition-all duration-300`}
@@ -132,7 +132,7 @@ const TeamMembers = () => {
         </div>
         <button
           onClick={handleNext}
-          className="absolute right-0 text-xl  bg-[#F5F5F5] py-2 px-4 rounded-full text-black shadow-lg z-10"
+          className="absolute right-2 mb-14 text-xl  bg-[#F5F5F5] py-2 px-4 rounded-full text-black shadow-lg z-10"
         >
           &#x276F;
         </button>

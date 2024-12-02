@@ -6,14 +6,15 @@ import 'remixicon/fonts/remixicon.css'; // Remix Icon CSS
 
 const Footer = () => {
     return (
-        <footer className="bg-[#28272C] text-white py-10 px-40">
-            <div className="w-full  flex justify-between ">
+        <footer className="bg-[#28272C] text-white  lg:px-40 px-5">
+            <div className="w-full lg:flex lg:py-10 pt-10 justify-between ">
                 {/* About Us Section */}
-                <div className="flex flex-col">
+                <div className="flex flex-col mb-5 lg:mb-0">
                     <Image
                         src={logo}
                         width={300}
                         height={100}
+                        className='lg:w-[300px] w-[200px]'
                         alt="Chairbord Logo"
                     />
                     
@@ -27,8 +28,8 @@ const Footer = () => {
                 {/* Quick Links Section */}
                 <div>
                     <div>
-                        <h2 className="text-3xl font-bold text-[#00B4FF] mb-2">QUICK LINKS</h2>
-                        <ul className="gap-2 text-lg grid-cols-1 grid text-gray-300">
+                        <h2 className="lg:text-3xl text-xl font-bold text-[#00B4FF] mb-2 ">QUICK LINKS</h2>
+                        <ul className="gap-2 lg:text-lg  grid-cols-1 grid text-gray-300">
                             <Link href="/" className=" outline-none">
                                 Home
                             </Link>
@@ -55,14 +56,14 @@ const Footer = () => {
                 
                 <div className='flex flex-col'>
                 <div>
-                        <h2 className="text-3xl font-bold text-[#00B4FF]  mb-2 ">ADDRESS</h2>
-                        <p className="text-lg text-gray-300">
+                        <h2 className="lg:text-3xl text-xl font-bold text-[#00B4FF]  mb-2 mt-4 lg:mt-0 ">ADDRESS</h2>
+                        <p className="lg:text-lg text-gray-300">
                         ChairBord pvt ltd 13, Sapna towar, near Marudhar Mart, Kalwar road, <br /> Govindpura, Jaipur, Rajasthan-302012
                         </p>
                     </div>
                     <div>
-                        <h2 className="text-3xl font-bold text-[#00B4FF] mt-4 mb-2">CONTACT</h2>
-                        <p className="text-lg text-gray-300">
+                        <h2 className="lg:text-3xl text-xl font-bold text-[#00B4FF] mt-4 mb-2">CONTACT</h2>
+                        <p className="lg:text-lg text-gray-300">
                             Email: connect@chairbord.com
                             <br />
                             Mob: +91-9269666646
@@ -71,7 +72,7 @@ const Footer = () => {
                 </div>
                     
                     <div>
-                        <h2 className="text-3xl font-bold text-[#00B4FF]  mb-2">SOCIALIZE</h2>
+                        <h2 className="lg:text-3xl text-xl font-bold text-[#00B4FF] lg:mt-0 mt-4  mb-2">SOCIALIZE</h2>
                         <div className="flex space-x-4">
                             <Link
                                 href="https://linkedin.com/in/mohit-kumar-b161a322a"
@@ -97,6 +98,11 @@ const Footer = () => {
                 {/* Socialize Section */}
 
             </div>
+            <div className="lg:h-full lg:my-auto lg:pb-5 py-5 lg:py-0">
+                    <h1 className="text-gray-300 md:text-lg  text-[12px] text-center font-medium ">
+                        Copyright &copy; 2024 Chairbord Pvt. Ltd. All rights reserved.
+                    </h1>
+                </div>
         </footer>
     );
 };

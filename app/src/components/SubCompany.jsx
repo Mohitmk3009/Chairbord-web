@@ -29,7 +29,7 @@ const SubCompany = () => {
 
     return (
         <div
-            className="bg-white py-8"
+            className="bg-white lg:py-8 py-4"
             ref={sectionRef}
         >
             <div
@@ -37,14 +37,14 @@ const SubCompany = () => {
                     }`}
             >
                 <div className="flex flex-col items-center my-8 ">
-                    <div className="flex items-center justify-center my-6 mt-[-34px] ">
+                    <div className="flex items-center justify-center lg:my-6 mt-[-30px] lg:mt-[-35px] my-1 lg:w-fit w-full px-5">
                         <div className="flex-grow border-t border-gray-300 h-[1px] w-[150px]"></div>
-                        <h2 className="text-center mx-4 text-2xl font-semibold text-black">Sub Companies</h2>
+                        <h2 className="text-center mx-4 lg:text-2xl text-lg font-semibold text-black">Sub&nbsp;Companies</h2>
                         <div className="flex-grow border-t border-gray-300 h-[1px] w-[150px]"></div>
                     </div>
-                    <div className="flex gap-14 text-black ">
-                        <div className="shadow-lg  pt-5 rounded-lg bg-white text-center max-w-[300px] ">
-                            <Image src={octabae} alt="FASTag" width={400} height={200} className="h-[160px] w-full " />
+                    <div className="flex gap-14 text-black flex-col lg:flex-row ">
+                        <div className="shadow-lg  pt-5 rounded-lg bg-white text-center max-w-[350px] ">
+                            <Image src={octabae} alt="FASTag" width={400} height={200} className="h-[180px] w-full " />
                             <div className='px-5 py-3 mt-4 bg-[#F5F5F5]'>
                                 <p className=" flex justify-center  w-full font-bold text-xl">Octabae</p>
                                 {/* <p className="mt-3 flex justify-center  w-full text-xs text-justify">Lorem ipsum dolor sit amet consectetur. Est rutrum maecenas rhoncus faucibus commodo. Morbi elementum in tellus nibh mi lorem commodo a. Purus in nunc feugiat cras turpis.</p> */}
@@ -52,8 +52,8 @@ const SubCompany = () => {
 
                         </div>
                         
-                        <div className="shadow-lg  pt-5 rounded-lg bg-white text-center max-w-[300px] ">
-                            <Image src={proofito} alt="FASTag" width={400} height={200} className="h-[160px] w-full " />
+                        <div className="shadow-lg  pt-5 rounded-lg bg-white text-center max-w-[350px] ">
+                            <Image src={proofito} alt="FASTag" width={400} height={200} className="h-[180px] w-full " />
                             <div className='px-5 py-3 mt-4 bg-[#F5F5F5]'>
                                 <p className=" flex justify-center  w-full font-bold text-xl">Proofito</p>
                                 {/* <p className="mt-3 flex justify-center  w-full text-xs text-justify">Lorem ipsum dolor sit amet consectetur. Est rutrum maecenas rhoncus faucibus commodo. Morbi elementum in tellus nibh mi lorem commodo a. Purus in nunc feugiat cras turpis.</p> */}
