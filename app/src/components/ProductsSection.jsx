@@ -74,7 +74,7 @@ const ProductsSection = () => {
         //         </div>
         //     </div>
         // </div>
-        <div className='bg-[#F5F5F5] flex flex-col items-center py-10'>
+        <div className='bg-[#F5F5F5] flex flex-col items-center pt-10 pb-5'>
             <div className="flex items-center justify-center  mb-6  mx-auto">
                 <div className="flex-grow border-t border-gray-300 h-[1px] w-[150px]"></div>
                 <h2 className="text-center mx-4 text-2xl font-semibold text-black">Products</h2>
@@ -180,6 +180,15 @@ const ProductsSection = () => {
 
                 <div className="vertical-line"></div>
             </section>
+            <a href="/products">
+            <button
+                                type="submit"
+                                className=" bg-[#00B4FF] text-white py-2 mt-5 px-5 rounded-lg font-semibold"
+                            >
+                                View more
+                            </button>
+            </a>
+            
         </div>
     );
 };

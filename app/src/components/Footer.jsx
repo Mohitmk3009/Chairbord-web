@@ -57,15 +57,15 @@ const Footer = () => {
                 <div>
                         <h2 className="text-3xl font-bold text-[#00B4FF]  mb-2 ">ADDRESS</h2>
                         <p className="text-lg text-gray-300">
-                            314, 3rd floor, HB Twin Tower,<br />  Netaji Subhash Place, New Delhi - 110034
+                        ChairBord pvt ltd 13, Sapna towar, near Marudhar Mart, Kalwar road, <br /> Govindpura, Jaipur, Rajasthan-302012
                         </p>
                     </div>
                     <div>
                         <h2 className="text-3xl font-bold text-[#00B4FF] mt-4 mb-2">CONTACT</h2>
                         <p className="text-lg text-gray-300">
-                            Email: info@genuinemark.org
+                            Email: connect@chairbord.com
                             <br />
-                            Mob: +91 8866296868
+                            Mob: +91-9269666646
                         </p>
                     </div>
                 </div>

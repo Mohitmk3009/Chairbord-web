@@ -21,6 +21,10 @@ body {
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 .work-section {
   /* background-color: var(--light);

@@ -47,7 +47,7 @@ const ContactUs = () => {
                             />
                             <div className="mt-7">
                                 <p className="font-semibold text-xl text-black">Call the helpline</p>
-                                <p className="text-gray-600 text-lg">9509807591</p>
+                                <p className="text-gray-600 text-lg">+91-9269666646</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-4 ">
@@ -58,7 +58,7 @@ const ContactUs = () => {
                             />
                             <div className="mt-7">
                                 <p className="font-semibold text-xl text-black">Email us:</p>
-                                <p className="text-gray-600 text-lg">admin@apnapayment.com</p>
+                                <p className="text-gray-600 text-lg">connect@chairbord.com</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-4 mt-[-50px]">
@@ -70,7 +70,7 @@ const ContactUs = () => {
                             <div className="mt-12">
                                 <p className="font-semibold text-xl text-black">Location:</p>
                                 <p className="text-gray-600 text-lg">
-                                10 SHREE SHYAM VIHAR GOKULPURA KALWAR ROAD JAIPUR 302012
+                                ChairBord pvt ltd 13, Sapna towar, near Marudhar Mart, Kalwar road, Govindpura, Jaipur, Rajasthan-302012
                                 </p>
                             </div>
                         </div>
@@ -82,7 +82,7 @@ const ContactUs = () => {
                             />
                             <div className="mt-7">
                                 <p className="font-semibold text-xl text-black">Work Hours:</p>
-                                <p className="text-gray-600 text-lg">Mon - Sun: 10am - 10pm</p>
+                                <p className="text-gray-600 text-lg">Mon - Sat: 10am - 7pm</p>
                             </div>
                         </div>
                     </div>

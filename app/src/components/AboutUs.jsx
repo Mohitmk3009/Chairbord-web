@@ -114,10 +114,10 @@ const AboutUs = () => {
                     {/* Statistics Section */}
                     <div className="grid grid-cols-2 mt-4 gap-4">
                         {[
-                            { value: "3.5", label: "Years Experience" },
-                            { value: "23", label: "Project Challenge" },
-                            { value: "830+", label: "Positive Reviews" },
-                            { value: "100K", label: "Trusted Students" },
+                            { value: "4", label: "Years Experience" },
+                            { value: "5", label: "Trusted Banks" },
+                            { value: "200+", label: "Positive Reviews" },
+                            { value: "2000", label: "Trusted Agents" },
                         ].map((item, index) => (
                             <div
                                 key={index}

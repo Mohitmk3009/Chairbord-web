@@ -47,7 +47,7 @@ const SubCompany = () => {
                             <Image src={octabae} alt="FASTag" width={400} height={200} className="h-[160px] w-full " />
                             <div className='px-5 py-3 mt-4 bg-[#F5F5F5]'>
                                 <p className=" flex justify-center  w-full font-bold text-xl">Octabae</p>
-                                <p className="mt-3 flex justify-center  w-full text-xs text-justify">Lorem ipsum dolor sit amet consectetur. Est rutrum maecenas rhoncus faucibus commodo. Morbi elementum in tellus nibh mi lorem commodo a. Purus in nunc feugiat cras turpis.</p>
+                                {/* <p className="mt-3 flex justify-center  w-full text-xs text-justify">Lorem ipsum dolor sit amet consectetur. Est rutrum maecenas rhoncus faucibus commodo. Morbi elementum in tellus nibh mi lorem commodo a. Purus in nunc feugiat cras turpis.</p> */}
                             </div>
 
                         </div>
@@ -56,7 +56,7 @@ const SubCompany = () => {
                             <Image src={proofito} alt="FASTag" width={400} height={200} className="h-[160px] w-full " />
                             <div className='px-5 py-3 mt-4 bg-[#F5F5F5]'>
                                 <p className=" flex justify-center  w-full font-bold text-xl">Proofito</p>
-                                <p className="mt-3 flex justify-center  w-full text-xs text-justify">Lorem ipsum dolor sit amet consectetur. Est rutrum maecenas rhoncus faucibus commodo. Morbi elementum in tellus nibh mi lorem commodo a. Purus in nunc feugiat cras turpis.</p>
+                                {/* <p className="mt-3 flex justify-center  w-full text-xs text-justify">Lorem ipsum dolor sit amet consectetur. Est rutrum maecenas rhoncus faucibus commodo. Morbi elementum in tellus nibh mi lorem commodo a. Purus in nunc feugiat cras turpis.</p> */}
                             </div>
 
                         </div>

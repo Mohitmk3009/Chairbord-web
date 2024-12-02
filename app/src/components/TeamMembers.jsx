@@ -1,6 +1,10 @@
 'use client'
 import React, { useState } from "react";
-import m1 from '../assets/m1.png'
+import m1 from '../assets/kamlesh.png'
+import m2 from '../assets/sunil.png'
+import m3 from '../assets/mahendra.png'
+import m4 from '../assets/vinod.png'
+import m5 from '../assets/amit.png'
 
 import Image from "next/image";
 const teamMembers = [
@@ -17,7 +21,7 @@ const teamMembers = [
     designation: "CMO",
     email:"sunil@chairbord.com",
     qualification:"Graduated from Rajasthan University",
-    image: m1,
+    image: m2,
     bgColor: "bg-green-300",
   },
   {
@@ -25,21 +29,25 @@ const teamMembers = [
     designation: "(Manager)",
     email:"connect@chairbord.com",
     qualification:"Graduated from Rajasthan University",
-    image: m1,
+    image: m3,
     bgColor: "bg-blue-500",
   },
-  // {
-  //   name: "Sam Wilson",
-  //   designation: "Designation",
-  //   image: m1,
-  //   bgColor: "bg-purple-300",
-  // },
-  // {
-  //   name: "Emily Carter",
-  //   designation: "Designation",
-  //   image: m1,
-  //   bgColor: "bg-red-300",
-  // },
+  {
+    name: "Mr. Vinod Kudi",
+    designation: "Management",
+    email:"vinod.kudi@chairbord.com",
+    qualification:"Graduated from Rajasthan University",
+    image: m4,
+    bgColor: "bg-purple-300",
+  },
+  {
+    name: "Mr. Amit Kumar",
+    designation: "CTO/Product Manager",
+    email:"amit@chairbord.com",
+    qualification:"Graduated from Rajasthan University",
+    image: m5,
+    bgColor: "bg-red-300",
+  },
 ];
 
 const TeamMembers = () => {

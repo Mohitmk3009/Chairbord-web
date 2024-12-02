@@ -17,21 +17,21 @@ const ImageCarousel = () => {
   }, [slides.length]);
 
   return (
-    <div className="relative w-full bg-white h-[600px] overflow-hidden">
+    <div className="relative w-full bg-white h-[500px] overflow-hidden">
       {/* Slider Container */}
       <div
         className="flex transition-transform ease-linear duration-1000"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="w-full h-[600px] flex-shrink-0">
+          <div key={index} className="w-full h-[500px] flex-shrink-0">
             {/* Use an img tag instead of backgroundImage */}
             <Image
               src={slide.src || slide}
               width={1920}
               height={1080}
               alt={`Slide ${index + 1}`}
-              className="w-full h-[600px] object-cover"
+              className="w-full h-[600px] object-cover "
             />
           </div>
         ))}
