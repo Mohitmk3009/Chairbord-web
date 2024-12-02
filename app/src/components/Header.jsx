@@ -26,18 +26,18 @@ const Header = () => {
   };
 
   return (
-    <Navbar className="bg-[#28272C] md:py-4 py-2 md:px-8 px-2 flex w-full justify-between sticky top-0 z-50">
+    <Navbar className="bg-[#28272C] md:py-4 py-2 md:px-8 px-2 flex w-full  sticky top-0 z-50">
       {/* Logo */}
       <Image
         alt="Chairbord"
         src={logo}
-        className="md:w-[200px] w-[140px] "
+        className="md:w-[200px] w-[140px] justify-start"
         width={200}
         height={50}
       />
 
       {/* Desktop Navbar */}
-      <NavbarContent className="hidden sm:flex gap-10 text-xl" justify="center">
+      <NavbarContent className="hidden sm:flex gap-10 text-xl w-full  pr-[200px] lg:justify-center" justify="center">
         <NavbarItem>
           <Link color="foreground" href="/">
             Home
@@ -67,13 +67,13 @@ const Header = () => {
       </NavbarContent>
       
       {/* Update Button */}
-      <NavbarContent>
+      {/* <NavbarContent>
         <NavbarItem>
           <Button className="bg-white/80 hidden backdrop-blur-lg text-black md:flex items-center font-medium text-lg gap-2 px-4 py-2 rounded-full shadow-lg hover:bg-white/50 transition">
             Check for updates
           </Button>
         </NavbarItem>
-      </NavbarContent>
+      </NavbarContent> */}
 
       {/* Mobile Hamburger */}
       <div className="sm:hidden z-[50] relative">

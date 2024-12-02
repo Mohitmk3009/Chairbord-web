@@ -10,7 +10,6 @@ import { toast } from "react-toastify"; // Assuming you're using react-toastify 
 import "react-toastify/dist/ReactToastify.css";
 import client from '@/app/axiosClient';
 
-
 const ContactUs = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -40,6 +39,7 @@ const ContactUs = () => {
                 subject: selectedValue,
                 notice: formData.notice,
             });
+            console.log(response,'response')
             toast.success("Application sent successfully!");
 
             // Reset the form after successful submission

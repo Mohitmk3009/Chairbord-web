@@ -52,7 +52,7 @@ const ImageCarousel = () => {
 
   return (
     <div
-      className="relative w-full bg-white lg:h-[550px] h-[150px] overflow-hidden"
+      className="relative w-full bg-white lg:h-[500px] h-[150px] overflow-hidden"
       // Touch events
       onTouchStart={(e) => handleStart(e.touches[0].clientX)}
       onTouchMove={(e) => handleMove(e.touches[0].clientX)}
@@ -69,13 +69,13 @@ const ImageCarousel = () => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="w-full lg:h-[550px] h-[150px] flex-shrink-0">
+          <div key={index} className="w-full lg:h-[500px] h-[150px] flex-shrink-0">
             <Image
               src={slide.src || slide}
               width={1920}
               height={1080}
               alt={`Slide ${index + 1}`}
-              className="w-full lg:h-[550px] h-[150px] object-cover"
+              className="w-full lg:h-[500px] h-[150px] object-cover"
             />
           </div>
         ))}
