@@ -76,7 +76,7 @@ const TeamMembers = () => {
   };
 
   return (
-    <div className="flex flex-col items-center overflow-hidden   bg-white">
+    <div className="flex flex-col items-center overflow-hidden pt-2 lg:pt-0  bg-white">
       <div className="flex items-center justify-center lg:my-6 lg:px-6  px-5 lg:w-fit w-full">
         <div className="flex-grow border-t border-gray-300 h-[1px] w-[150px]"></div>
         <h2 className="text-center mx-4 lg:text-2xl text-lg font-semibold text-black">Team&nbsp;Members</h2>
@@ -107,7 +107,7 @@ const TeamMembers = () => {
               return (
                 <div
                   key={index}
-                  className={`flex flex-col items-center  justify-center mx-16 lg:my-20 mt-20 mb-5 transition-all duration-300 ${isCenter ? "" : "opacity-60"}`}
+                  className={`flex flex-col items-center  justify-center mx-16 lg:my-20 mt-24 mb-5 transition-all duration-300 ${isCenter ? "" : "opacity-60"}`}
                 >
                   <div
                     className={`rounded-full flex items-center justify-center ${member.bgColor} ${sizeClass} transition-all duration-300`}
