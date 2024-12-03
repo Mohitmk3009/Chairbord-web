@@ -2,7 +2,7 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
 const client: AxiosInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_BASEURL,
+  baseURL: 'https://api.chairbord.in/v1/api',
   // timeout: 10000,
 });
 
