@@ -18,17 +18,18 @@ const ContactUs = () => {
         notice: ''
     });
     const [isChecked, setIsChecked] = useState(false);
-    const [selectedValue, setSelectedValue] = useState('');
+    const [selectedValue, setSelectedValue] = useState(`Chairbord's Executive will contact you soon !!`);
     const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
+        console.log("submitting form...", formData);
         e.preventDefault();
 
         if (!isChecked) {
             toast.error("Please accept the terms and conditions!");
             return;
         }
-
+        const submitLoader = toast.loading("Submitting form...");
         setLoading(true);
 
         try {
@@ -39,7 +40,7 @@ const ContactUs = () => {
                 subject: selectedValue,
                 notice: formData.notice,
             });
-            console.log(response,'response')
+            console.log(response, 'response')
             toast.success("Application sent successfully!");
 
             // Reset the form after successful submission
@@ -55,6 +56,7 @@ const ContactUs = () => {
             console.error("Error submitting form:", error);
             toast.error("Error submitting form. Please try again.");
         } finally {
+            toast.dismiss(submitLoader);
             setLoading(false);
         }
     };
@@ -150,6 +152,7 @@ const ContactUs = () => {
                                     onChange={(e) =>
                                         setFormData((prev) => ({ ...prev, name: e.target.value }))
                                     }
+                                    required={true}
                                     className="col-span-1 border-[.5px] border-gray-500 focus:border-black rounded-lg px-4 py-2 w-full text-gray-700"
                                 />
                                 <input
@@ -159,6 +162,7 @@ const ContactUs = () => {
                                     onChange={(e) =>
                                         setFormData((prev) => ({ ...prev, email: e.target.value }))
                                     }
+                                    required={true}
                                     className="col-span-1 border-[.5px] border-gray-500 focus:border-black rounded-lg px-4 py-2 w-full text-gray-700"
                                 />
                             </div>
@@ -169,6 +173,7 @@ const ContactUs = () => {
                                 onChange={(e) =>
                                     setFormData((prev) => ({ ...prev, number: e.target.value }))
                                 }
+                                required={true}
                                 className="col-span-1 border-[.5px] mb-4 border-gray-500 focus:border-black rounded-lg px-4 py-2 w-full text-gray-700"
                             />
                             <textarea
@@ -177,6 +182,7 @@ const ContactUs = () => {
                                 onChange={(e) => setFormData({ ...formData, notice: e.target.value })}
                                 className="border-[.5px] border-gray-500 focus:border-black rounded-lg px-4 py-2 w-full mb-4 text-gray-700"
                                 rows="4"
+                                required={true}
                             ></textarea>
                             <div className="flex">
                                 <input

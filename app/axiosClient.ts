@@ -1,17 +1,20 @@
 "use client";
-import axios from "axios";
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
-const client = axios.create({
+const client: AxiosInstance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_BASEURL,
   // timeout: 10000,
 });
 
 let isRefreshing = false;
-let failedQueue : any = [];
+let failedQueue: {
+  resolve: (token: string) => void;
+  reject: (error: unknown) => void;
+}[] = [];
 
 // Function to process the failed request queue
-const processQueue = (error : any, token = null) => {
-  failedQueue.forEach((prom : any) => {
+const processQueue = (error: unknown, token: string | null) => {
+  failedQueue.forEach((prom) => {
     if (token) {
       prom.resolve(token);
     } else {
@@ -23,20 +26,22 @@ const processQueue = (error : any, token = null) => {
 };
 
 client.interceptors.response.use(
-  (response) => response,
+  (response: AxiosResponse) => response,
   async (error) => {
-    const originalRequest = error.config;
+    const originalRequest = error.config as AxiosRequestConfig & { _retry?: boolean };
 
     if (error.response && error.response.status === 401 && !originalRequest._retry) {
       if (isRefreshing) {
         // Add the request to the queue to be retried after refreshing
         return new Promise((resolve, reject) => {
           failedQueue.push({
-            resolve: (token : any) => {
-              originalRequest.headers.Authorization = `Bearer ${token}`;
+            resolve: (token: string) => {
+              if (originalRequest.headers) {
+                originalRequest.headers.Authorization = `Bearer ${token}`;
+              }
               resolve(client(originalRequest));
             },
-            reject: (err : any) => reject(err),
+            reject: (err) => reject(err),
           });
         });
       }
@@ -47,7 +52,7 @@ client.interceptors.response.use(
       try {
         // Call the refresh token API
         const refreshToken = localStorage.getItem("refreshToken");
-        const response = await axios.post(`${process.env.NEXT_PUBLIC_BASEURL}/refresh-token`, {
+        const response = await axios.post<{ token: string }>(`${process.env.NEXT_PUBLIC_BASEURL}/refresh-token`, {
           refreshToken,
         });
 
@@ -57,7 +62,9 @@ client.interceptors.response.use(
         localStorage.setItem("cbpl-token", newAccessToken);
 
         // Retry the original request with the new token
-        originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
+        if (originalRequest.headers) {
+          originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
+        }
 
         // Process all queued requests
         processQueue(null, newAccessToken);

@@ -6,9 +6,9 @@ import Footer from '../src/components/Footer'
 const page = () => {
   return (
     <>
-<Header/>
-<ContactUs/>
-<Footer/>
+      <Header />
+      <ContactUs />
+      <Footer />
     </>
   )
 }
