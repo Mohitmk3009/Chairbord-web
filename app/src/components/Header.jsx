@@ -104,7 +104,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-[100%] left-0 w-full bg-[#28272C] shadow-lg z-40">
+        <div className="absolute top-[100%] left-0  w-full bg-[#28272C] shadow-lg z-40">
           <ul className="flex flex-col items-center gap-4 py-4 text-lg text-white">
             <li>
               <Link color="foreground" href="/" onClick={toggleMenu}>
