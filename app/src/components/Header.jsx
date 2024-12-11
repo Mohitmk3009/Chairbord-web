@@ -25,12 +25,12 @@ const Header = () => {
   };
 
   return (
-    <Navbar className="bg-[#28272C] md:py-4 py-2 md:px-8 px-2 flex w-full  sticky top-0 z-50">
+    <Navbar className="bg-[#28272C] md:py-4 py-2 md:px-8  flex w-full  sticky top-0 z-50">
       {/* Logo */}
       <Image
         alt="Chairbord"
         src={logo}
-        className="md:w-[200px] w-[140px] justify-start"
+        className="md:w-[200px] w-[140px] justify-start lg:ml-0 ml-[-10px]"
         width={200}
         height={50}
       />
@@ -75,7 +75,7 @@ const Header = () => {
       </NavbarContent> */}
 
       {/* Mobile Hamburger */}
-      <div className="sm:hidden z-[50] relative">
+      <div className="sm:hidden z-[50] relative mr-[-10px]">
         <button
           onClick={toggleMenu}
           className={`relative w-10 h-10 flex-col flex gap-[5px] items-center justify-center focus:outline-none transition-all duration-500 ease-in-out ${
