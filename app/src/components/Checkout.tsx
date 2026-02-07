@@ -2,11 +2,38 @@
 
 import client from '@/app/axiosClient';
 import React from 'react'
+import { AxiosResponse } from 'axios';
+
+interface PaymentResponse {
+    payment_session_id: string;
+    [key: string]: unknown;
+}
+
+interface CashfreeConfig {
+    mode: "production" | "sandbox";
+}
+
+interface CashfreeCheckoutOptions {
+    paymentSessionId: string;
+    redirectTarget: string;
+}
+
+interface Cashfree {
+    new (config: CashfreeConfig): {
+        checkout: (options: CashfreeCheckoutOptions) => void;
+    };
+}
+
+declare global {
+    interface Window {
+        Cashfree: Cashfree;
+    }
+}
 
 const Checkout = () => {
 
     const handlePayment = async () => {
-        const res: any = await client.post(
+        const res: AxiosResponse<PaymentResponse> = await client.post(
             `/cashfree/create-order-web`,
             {
                 id: 166,
@@ -20,7 +47,7 @@ const Checkout = () => {
         const data = res?.data;
         console.log(data, '<-- payment data')
 
-        const cashfree = new (window as any).Cashfree({
+        const cashfree = new window.Cashfree({
             mode: "production" // SAME as mobile
         });
 
