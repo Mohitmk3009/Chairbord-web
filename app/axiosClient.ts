@@ -2,7 +2,8 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
 const client: AxiosInstance = axios.create({
-  baseURL: 'https://api.chairbord.in/v1/api',
+  baseURL: 'https://cbpl.chairbord.in/v1/api',
+  // baseURL: 'http://localhost:3001/v1/api',
   // timeout: 10000,
 });
 
